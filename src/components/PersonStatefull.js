@@ -7,8 +7,7 @@ class PersonStatefull extends Component {
 
         return (
             <div>
-                <h2>{name} statefull</h2>
-                <h2>{age} an(s)</h2>
+                <h2 style={{color: age > 5 ? 'red' : 'pink' }}>{name} statefull</h2>
                 {children ? children : <b>Rien a afficher</b>}
             </div>
         )

@@ -39,6 +39,9 @@ class App extends Component {
     <div className="App">
       <input value={famille.membre1.name} onChange={this.handleChange} type='text' />
       <PersonStateless name={famille.membre1.name} age={famille.membre1.age} />
+      <PersonStatefull name={famille.membre1.name} age={famille.membre1.age}>
+        <h3>{famille.membre1.age}</h3>
+      </PersonStatefull>
       <PersonStatefull name={famille.membre2.name}>
         <h3>{famille.membre2.age}</h3>
       </PersonStatefull>
