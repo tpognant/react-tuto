@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import PersonStateless from './components/PersonStateless'
+import PersonStatefull from './components/PersonStatefull'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        p.test
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PersonStateless name='Thomas' />
+      <PersonStatefull name='Thomas'>
+        <h3>coucou je suis le child</h3>
+      </PersonStatefull>
     </div>
   );
 }
