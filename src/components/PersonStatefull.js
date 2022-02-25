@@ -1,14 +1,28 @@
-import { Component } from "react";
+import {Component} from "react";
 
 class PersonStatefull extends Component {
 
-    render () {
-        const { children, name, age } = this.props
+    render() {
+        const {children, name, currentcolor, handleIncreaseClick, handleDecreaseClick, handleChange} = this.props
 
         return (
             <div>
-                <h2 style={{color: age > 5 ? 'red' : 'pink' }}>{name} statefull</h2>
-                {children ? children : <b>Rien a afficher</b>}
+                <div>
+                    <h2 style={{color: currentcolor}}>{name}</h2>
+                    {children ? children : <b>Rien a afficher</b>}
+                </div>
+                <div>
+                    <input value={name} onChange={handleChange} type='text'/>
+                </div>
+                <div>
+                    <input type="button" value="Anonymize"/>
+                    <button onClick={handleIncreaseClick} >
+                        Increase age
+                    </button>
+                    <button onClick={handleDecreaseClick} >
+                        Decrease age
+                    </button>
+                </div>
             </div>
         )
     }

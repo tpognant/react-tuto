@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class Button extends Component {
 
     render () {
-        const { increaseage } = this.props
+        const { manageage, children } = this.props
 
         return (
-            <button onClick={increaseage}>
-                Increase age
+            <button onClick={manageage}>
+                {children}
             </button>
         )
     }
